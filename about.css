@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    color: #cfa3a3;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #b7bcc2;
+}
+
+.about p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.about-image img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Fun Fact Section */
+.fun-fact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#fun-fact-btn {
+    background-color: #01070c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#fun-fact-btn:hover {
+    background-color: #005bb5;
+}
+
+#fun-fact-output {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #7f5f5f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #020407;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0; 
+  }
+  body {
+    background-image: url('download.jpg');
+    background-size: cover; /* Adjusts the image to fill the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  
+  .navigation {
+    margin-top: 25px;
+    font-family: var(--font1);
+    /* height: 74px;  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left {
+    display: flex;
+  }
+  
+  .nav-left span {
+    font-size: 35px;
+    padding-top: 10px;
+  }
+  
+  .nav-left ul {
+    display: flex;
+    align-items: center;
+    margin: 0 77px;
+    font-size: 22px;
+    padding-bottom: 23px;
+  }
+  
+  .nav-left ul li {
+    list-style: none;
+    margin: 0 14px;
+    font-family: var(--font2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-left ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-left ul li a:hover {
+    color: var(--main-bg-color);
+    font-weight: bolder;
+  }
+  
+  .content {
+    height: 100%;
+    display: flex;
+    margin-top: 32px;
+    padding: 9px;
+    position: relative;
+  }
+  
+  .content::after {
+    content: "";
+    background-image: url("../img/11.svg");
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.15;
+    border-radius: 12px;
+  }
+  
+  .content-left {
+    font-family: var(--font1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 49px;
+    z-index: 1;
+  }
+  
+  .content-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content-right img {
+    height: 355px;
+    border: 2px solid black;
+    border-radius: 200px;
+  }
+  
+  .home-articles {
+    padding: 18px;
+    background-color: rgb(248, 239, 239, 0.5);
+    margin-top: 23px;
+    position: relative;
+  }
+  
+  .year-box {
+    position: absolute;  
+    right: 0px;
+    top: 100px;
+    width: 234px;
+    height: 255px;
+    font-size: 18px;
+  }
+  
+  .year-box div {
+    margin: 12px 0px;
+  }
+  
+  .home-article {
+    display: flex;
+    margin: 25px;
+  }
+  
+  .home-article img {
+    width: 300px;
+  }
+  
+  .home-article-content {
+    align-self: center;
+    padding: 25px;
+  }
+  
+  .home-article-content a {
+    text-decoration: none;
+    color: rgb(14, 15, 15);
+  }
+  /* .home-articles{} */
+  .footer {
+    height: 50px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+  }
+  
+  .footer a {
+    color: white;
+  }
+
