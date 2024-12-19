@@ -5,51 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="utils.css">
-    <link rel="stylesheet" href="style (1).css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="create.css">
-    <title>iBlog - Heaven for bloggers</title>
+    <link rel="stylesheet" href="search.html">
+    <link rel="stylesheet" href="search2.html">
+    <title>BlogShere</title>
 </head>
-
 <body>
-    <!-- <body>
-        <header>
-          <h1>User Blog</h1>
-        </header>
-        <main>
-          <section class="blog-form">
-            <h2>Create a Blog Post</h2>
-            <form id="blogForm">
-              <label for="title">Title:</label>
-              <input type="text" id="title" name="title" placeholder="Enter blog title" required>
-              
-              <label for="content">Content:</label>
-              <textarea id="content" name="content" placeholder="Write your blog content..." required></textarea>
-              
-              <button type="submit">Post Blog</button>
-            </form>
-          </section>
-          <section class="blog-display">
-            <h2>Published Blogs</h2>
-            <div id="blogs"></div>
-          </section>
-        </main> -->
-    <nav class="navigation max-width-1 m-auto">
+  <nav class="navigation max-width-1 m-auto">
         <div class="nav-left">
             <a href="/">
-                <span><img src="logo.png" width="94px" alt=""></span>
-            </a>
+                <span><img src="logo.jpg" width="94px" alt=""></span>
+            </a>  
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="nav-right">
-            <form action="search.html" method="get">
-                <input class="form-input" type="text" name="query" placeholder="Blog Search">
-                <button class="btn"><img src="search.jpg" alt="" style="height: 20px; width: 20px; margin-right: 8px;"></button>
-            </form>
+       
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search blog posts..." />
+                <button onclick="searchPosts()">Search</button>
+            </div>
+            <div id="searchResults"></div>
 
         </div>
 
@@ -57,12 +37,6 @@
     <div class="max-width-1 m-auto">
         <hr>
     </div>
-    <div class="m-auto content max-width-1 my-2">
-        <div class="content-left">
-            <h1>The heaven for bloggers</h1>
-            <p>Bloggers are always on the lookout for platforms that amplify their voice and connect them with an audience that truly values their work. Welcome to iBlog, the ultimate haven for bloggers! Here, your creativity meets opportunity—submit your articles, get them approved, and watch as your ideas reach a wider audience. Whether you're sharing insightful tips, personal stories, or creative musings, iBlog ensures your voice is heard. It’s not just a platform; it’s a gateway to growth, engagement, and recognition.</p>
-        </div>
-        
     </div>
 
     <div class="max-width-1 m-auto">
@@ -70,139 +44,126 @@
     </div>
     <div class="home-articles max-width-1 m-auto font2">
         <h2>Featured Articles</h2>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="wealth.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog1.html">
-                    <h3>"5 Smart Financial Habits to Build Wealth Over Time"</h3>
-                </a>
+        
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="wealth.jpg" alt="article"> 
+       </div>
+        <div class="home-article-content font1">
+            <a href="blog1.html">
+                <h3>"5 Smart Financial Habits to Build Wealth Over Time"</h3>
+            </a>
 
-                <div>Albert Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
+            <div>Albert Weber</div>
+            <span>07 January | 6 min read</span>
         </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="ai.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog2.html">
-                    <h3>"5 Ways AI Can Help Small Businesses Thrive"</h3>
-                </a>
-
-                <div>Albert Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="tech world.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog3.html">
-                    <h3>"Exploring the Latest Technologies Transforming Our World"</h3>
-                </a>
-
-                <div>Albert Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="trvl.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog4.html">
-                    <h3>"The Joy and Benefits of Traveling: Exploring the World Beyond Your Backyard"</h3>
-                </a>
-
-                <div>Albert Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="tech.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog5.html">
-                    <h3>The Evolution of Programming Technologies: Shaping the Future of Software Development"</h3>
-                </a>
-
-                <div>Peter Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="credit.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog6.html">
-                    <h3>"Protect Yourself from Credit Card Scams: Recognize the Red Flags and Take Action"</h3>
-                </a>
-
-                <div>Peter Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="media.jpg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog7.html">
-                    <h3>"The Advantages and Disadvantages of Social Media"</h3>
-                </a>
-
-                <div>Peter Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-        <div class="home-article">
-            <div class="home-article-img">
-                <img src="11.svg" alt="article">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blog8.html">
-                    <h3>"The Importance of Sports in Our Lives"</h3>
-                </a>
-
-                <div>Peter Weber</div>
-                <span>07 January | 6 min read</span>
-            </div>
-        </div>
-
     </div>
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="ai.jpg" alt="article">
+        </div>
+        <div class="home-article-content font1">
+            <a href="blog2.html">
+                <h3>"5 Ways AI Can Help Small Businesses Thrive"</h3>
+            </a>
+
+            <div>Albert Weber</div>
+            <span>07 January | 6 min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="tech world.jpg" alt="article">
+        </div>
+        <div class="home-article-content font1">
+            <a href="blog3.html">
+                <h3>"Exploring the Latest Technologies Transforming Our World"</h3>
+            </a>
+
+            <div>Albert Weber</div>
+            <span>07 January | 6 min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="trvl.jpg" alt="article">
+        </div>
+        <div class="home-article-content font1">
+            <a href="blog4.html">
+                <h3>"The Joy and Benefits of Traveling: Exploring the World Beyond Your Backyard"</h3>
+            </a>
+
+            <div>Albert Weber</div>
+            <span>07 January | 6 min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="tech.jpg" alt="article">
+        </div>
+        <div class="home-article-content font1">
+            <a href="blog5.html">
+                <h3>The Evolution of Programming Technologies: Shaping the Future of Software Development"</h3>
+            </a>
+
+            <div>Peter Weber</div>
+            <span>07 January | 6 min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="credit.jpg" alt="article">
+        </div>
+        <div class="home-article-content font1">
+            <a href="blog6.html">
+                <h3>"Protect Yourself from Credit Card Scams: Recognize the Red Flags and Take Action"</h3>
+            </a>
+
+            <div>Peter Weber</div>
+            <span>07 January | 6 min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <div class="home-article-img">
+            <img src="media.jpg" alt="article">
+        </div>
+        <div class="home-article-content font1">
+            <a href="blog7.html">
+                <h3>"The Advantages and Disadvantages of Social Media"</h3>
+            </a>
+
+            <div>Peter Weber</div>
+    </div>
+</div>
+</div>
+<header>
+    <h1>User Blog</h1>
+  </header>
+  <main>
+    <section class="blog-form">
+      <h2>Create a Blog Post</h2>
+      <form id="blogForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter blog title" required>
+        
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" placeholder="Write your blog content..." required></textarea>
+        
+        <button type="submit">Post Blog</button>
+      </form>
+    </section>
+    <section class="blog-display">
+      <h2>Published Blogs</h2>
+      <div id="blogs"></div>
+    </section>
+  </main>
+    
 
     <div class="footer">
-        <p>Copyright &copy; iBlog.com </p>
-        <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+        <p>Copyright &copy; BlogShere.com </p>
     </div>
-    <header>
-        <h1>User Blog</h1>
-      </header>
-      <main>
-        <section class="blog-form">
-          <h2>Create a Blog Post</h2>
-          <form id="blogForm">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" placeholder="Enter blog title" required>
-            
-            <label for="content">Content:</label>
-            <textarea id="content" name="content" placeholder="Write your blog content..." required></textarea>
-            
-            <button type="submit">Post Blog</button>
-          </form>
-        </section>
-        <section class="blog-display">
-          <h2>Published Blogs</h2>
-          <div id="blogs"></div>
-        </section>
-      </main>
 <script src="create.js"></script>
+<script src="search.js"></script>
     </body>    
 
 </html>
